@@ -1,6 +1,10 @@
-button{
-    background-color: rgb(182, 82, 98)
+body{
+    background-image: url("https://1millionideas.com/wp-content/uploads/2021/08/FotoJet-7.jpg");
 }
+
 h1{
-   color:blue
+   color:rgb(111, 41, 89);
+    position: relative;
+	
+    align-items: center;
 }
