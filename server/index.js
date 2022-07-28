@@ -16,11 +16,11 @@ rollbar.log('Hello world!')
 
 app.use(express.json())
 
+const plants = ['Peace lily', 'Aloe vera', 'English ivy']
+
 app.get('/', function(req, res){
     res.sendFile(path.join(__dirname, '../public/index.html'))
 })
-
-const plants = ['Peace lily', 'Aloe vera', 'English ivy']
 
 app.use(express.static(path.join(__dirname, '../public')))
 
@@ -32,9 +32,9 @@ app.get('/api/plants', (req, res) => {
 app.post('/api/plants', (req, res) => {
    let {name} = req.body
 
-   const index = students.findIndex(plant => {
+   const index = plants.findIndex((plant) => {
        return plant === name
-   })
+   });
 
    try {
        if (index === -1 && name !== '') {
